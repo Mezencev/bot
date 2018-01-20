@@ -16,9 +16,12 @@ server.post('/api/messages', connector.listen());
 
 const inMemoryStorage = new builder.MemoryBotStorage();
 const bot = new builder.UniversalBot(connector, (session) => {
-  let msg = 'Welcome to the reservation bot. Please say `Dinner Reservation` or `Order Dinner`';
+  let msg = 'Welcome to the reservation bot.';
   session.send(msg);
+  session.beginDialog('mainMenu');
 }).set('storage', inMemoryStorage);
 
+require('./dialogs/mainMenu')(bot, builder);
 require('./dialogs/dinnerReservation')(bot, builder);
 require('./dialogs/orderDinner')(bot, builder);
+require('./dialogs/addDinnerItem')(bot, builder);
