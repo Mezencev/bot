@@ -15,7 +15,7 @@ module.exports = (bot, builder) => {
       (session, results) => {
         session.dialogData.reservationName = results.response;
         session.send(`Reservation confirmed. Reservation details: <br/>Date/Time: ${session.dialogData.reservationDate} <br/>Party size: ${session.dialogData.partySize} <br/>Reservation name: ${session.dialogData.reservationName}`);
-        session.endDialog();
+        session.replaceDialog('mainMenu');        
       }
     ])
   .triggerAction({

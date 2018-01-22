@@ -11,7 +11,7 @@ module.exports = (bot, builder) => {
     }
   ])
   .triggerAction({
-    matches: /^main menu$^/i,
+    matches: /^main menu$/i,
     confirmPrompt: 'This will cancel your request. Are you sure?'  
-  });
+  })
 }

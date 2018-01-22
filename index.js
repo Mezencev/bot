@@ -25,3 +25,4 @@ require('./dialogs/mainMenu')(bot, builder);
 require('./dialogs/dinnerReservation')(bot, builder);
 require('./dialogs/orderDinner')(bot, builder);
 require('./dialogs/addDinnerItem')(bot, builder);
+require('./dialogs/scheduleShuttle')(bot, builder);
