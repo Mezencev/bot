@@ -1,14 +1,14 @@
-module.exports = { 
+module.exports = {
   'Order dinner': {
-    item: 'orderDinner'
+    item: 'orderDinner',
   },
   'Dinner reservation': {
-    item: 'dinnerReservation'
+    item: 'dinnerReservation',
   },
   'Schedule shuttle': {
-    item: 'scheduleShuttle'
+    item: 'scheduleShuttle',
   },
   'Request wake-up call': {
-    item: 'wakeupCall'
+    item: 'wakeupCall',
   },
 };
